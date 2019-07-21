@@ -16,9 +16,9 @@ function draw(){
     obs[i].show();
     obs[i].update();
 
-    if (obs[i].hits(balloon)) {
-      console.log('HIT');
-    }
+    // if (obs[i].hits(balloon)) {
+    //   console.log('HIT');
+    // }
 
     if (obs[i].offscreen()) {
       obs.splice(i, 1);
