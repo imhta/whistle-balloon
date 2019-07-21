@@ -1,13 +1,12 @@
 let balloon;
 let obs = [];
-let hit = 0;
+let ui;
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
   balloon = new Balloon();
   obs.push(new Obs());
-  button = createButton('pause');
-  button.position(19, 19);
+  ui = new CreateUi();
 }
 
 function draw(){
@@ -33,9 +32,6 @@ function draw(){
 
 }
 
-function mouseClicked()  {
-    balloon.up();
-}
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
