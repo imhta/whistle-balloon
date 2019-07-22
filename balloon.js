@@ -21,12 +21,10 @@ function Balloon() {
   }
 
   this.update = function() {
-    this.micLevel = this.mic.getLevel() * 1000;
-    // console.log(this.micLevel);
+    this.velocity = 5;
+    this.micLevel = this.mic.getLevel() * 550;
     this.velocity += this.gravity;
     this.y += this.velocity - this.micLevel;
-    // console.log(this.velocity,this.y)
-    // this.velocity -= this.micLevel;
 
     if (this.y > height) {
       this.y = height;

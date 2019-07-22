@@ -9,14 +9,14 @@ class CreateUi {
 
   createElements() {
     this.startButton = createButton("Start / Pause");
-    this.levelState = createElement('p', '');
+    this.text =  createP("");
   }
   applyPosition() {
     this.startButton.position(19, 19);
-    this.levelState.position(170, 12);
+    this.text.position(170, 12);
   }
-  updateLevelState(text){
-    this.levelState.html(text);
+  update(text) {
+    this.text.html(text);
   }
   applyStyle() {}
   applyFunctionality() {
